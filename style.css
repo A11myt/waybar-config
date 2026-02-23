@@ -1,0 +1,168 @@
+/* ───────────────────────────
+   GLOBAL NOTHING STYLE
+   ─────────────────────────── */
+
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "Iosevka Nerd Font", sans-serif;
+  font-size: 13px;
+  min-height: 0;
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s, border-radius 0.25s;
+}
+
+#waybar {
+  background: rgba(15,15,15,0.2);
+  color: #e5e5e5;
+  padding: 8px 16px;
+  border-bottom: none;
+}
+
+/* Container */
+.modules-left,
+.modules-center,
+.modules-right {
+  padding: 0 8px;
+}
+
+/* ───────────────────────────
+   MODULES — SOFT NOTHING PANELS
+   rund, keine Border, nur leichter Shadow
+   ─────────────────────────── */
+#power-profiles-daemon,
+#custom-notification,
+#custom-launcher{
+  font-size: 18px;
+  padding: 0px 16px 0 10px ;
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.25);
+}
+
+#custom-pacman{
+  padding: 0px 16px 0 10px ;
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.25);
+}
+#custom-weather,
+#workspaces,
+#clock,
+#pulseaudio,
+#network,
+#cpu,
+#memory,
+#bluetooth,
+#custom-arch,
+#custom-media {
+  padding: 4px 14px;
+  margin: 0 6px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.25);
+}
+
+/* Hover: nur leicht heller, mit leichtem Orange-Touch */
+#custom-weather:hover,
+#power-profiles-daemon:hover,
+#custom-pacman:hover,
+#custom-launcher:hover,
+#custom-notification:hover,
+#clock:hover,
+#battery:hover,
+#pulseaudio:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#bluetooth:hover,
+#custom-arch:hover,
+#custom-media:hover {
+  color: rgba(255,106,0,1);
+  background: rgba(255,255,255,0.08);
+}
+
+/* ───────────────────────────
+   CLOCK – Dot Matrix Highlight
+   ─────────────────────────── */
+
+#clock {
+  font-family: "NDOT 47 (inspired by NOTHING)", "Hack Nerd Font", monospace;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+/* ───────────────────────────
+   WORKSPACES – super clean
+   ─────────────────────────── */
+/* #custom-weather.sunny { color: #facc15; } */
+/* #custom-weather.cloudy { color: #94a3b8; } */
+/* #custom-weather.rainy { color: #38bdf8; } */
+/* #custom-weather.snowy { color: #e2e8f0; } */
+/* #custom-weather.foggy { color: #cbd5e1; } */
+/* #custom-weather.thunder { color: #f97316; } */
+
+#workspaces button {
+  padding: 4px 10px;
+  margin: 0 4px;
+  color: #aaaaaa;
+  background: rgba(255,255,255,0.05);
+  border-radius: 14px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.20);
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s, border-radius 0.25s;
+}
+
+/* aktive Workspace: Orange + Dot Matrix */
+#workspaces button.active {
+  background: rgba(255,106,0,0.75);           /* Orange-Tint */
+  color: #ffffff;
+  font-family: "NDOT 47 (inspired by NOTHING)", "Hack Nerd Font", monospace;
+  letter-spacing: 2px;
+}
+
+#workspaces button:hover {  
+  background: rgba(255,255,255,0.12);
+  color: rgba(255,106,0,1);
+}
+
+/* ───────────────────────────
+   ARCH ICON – Orange Accent + Dot Matrix
+   ─────────────────────────── */
+
+#custom-arch {
+  font-family: "NDOT 47 (inspired by NOTHING)", "Hack Nerd Font", monospace;
+  letter-spacing: 2px;
+  color: #ff6a00;                              /* Akzentfarbe */
+  background: rgba(255,106,0,0.10);           /* leicht orangener Chip */
+}
+
+/* ───────────────────────────
+   STATES
+   ─────────────────────────── */
+
+#battery{
+  padding: 2px 16px 0px 10px;
+  margin: 0 6px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 18px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.25);
+}
+
+#battery.critical {
+  background: rgba(255,100,100,0.08);
+  color: #ff8080;
+}
+
+/* ───────────────────────────
+   TRAY
+   ─────────────────────────── */
+
+#tray {
+  padding: 0 10px;
+}
+
+#tray * {
+  font-size: 26px;
+  margin: 0 4px;
+  border-radius: 12px;
+}
+
